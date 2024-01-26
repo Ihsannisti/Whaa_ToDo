@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Whaa To-do</string>
+    <string name="anything_else_to_do">Anything else to do?</string>
+    <string name="add_task">Add Task</string>
+    <string name="whaa_to_do_app">Whaa To Do? App</string>
+    <string name="_2_long_press_to_delete_the_task">2. Long Press the task to delete the task.</string>
+    <string name="_1_write_and_press_add_task_button_to_add_new_task">1. Write and press Add Task button to add new task.</string>
+</resources>
