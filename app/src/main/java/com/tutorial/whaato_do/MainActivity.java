@@ -46,7 +46,7 @@ public class MainActivity extends Activity {
         setupListViewLongClickListener();
     }
 
-    // Method to setup long click listener for ListView items
+    // To setup long click listener for ListView items
     private void setupListViewLongClickListener() {
         taskListView.setOnItemLongClickListener((adapterView, view, i, l) -> {
             // Show delete confirmation dialog
@@ -55,7 +55,7 @@ public class MainActivity extends Activity {
         });
     }
 
-    // Method to show delete confirmation dialog
+    // To show delete confirmation dialog
     private void showDeleteConfirmationDialog(int position) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Confirm Delete")
@@ -71,7 +71,7 @@ public class MainActivity extends Activity {
                 .show();
     }
 
-    // Method to delete task
+    // To delete task
     private void deleteTask(int position) {
         String taskToDelete = tasks.get(position);
         SQLiteDatabase db = dbHelper.getWritableDatabase();
@@ -82,16 +82,16 @@ public class MainActivity extends Activity {
         taskAdapter.notifyDataSetChanged(); // Update ListView
     }
 
-    // Method to add a new task to the database
+    // To add a new task to the database
     public void addTask(View view) {
         EditText etNewTask = findViewById(R.id.etNewTask);
         String itemText = etNewTask.getText().toString();
         if (itemText.isEmpty()) {
-            // Show warning if task is empty
+            // Alert if task is empty
             Toast.makeText(this, "Task is empty!", Toast.LENGTH_SHORT).show();
 
         } else if (tasks.contains(itemText)) {
-            // Show alert if task already exists
+            // Alert if task already exists
             Toast.makeText(this, "Task already exists!", Toast.LENGTH_SHORT).show();
         } else {
             SQLiteDatabase db = dbHelper.getWritableDatabase();
@@ -108,7 +108,7 @@ public class MainActivity extends Activity {
         }
     }
 
-    // Method to load tasks from the database
+    // To load tasks from the database
     private void loadTasks() {
         SQLiteDatabase db = dbHelper.getReadableDatabase();
         String[] projection = {TaskContract.TaskEntry.COLUMN_TASK_NAME};
